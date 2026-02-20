@@ -1,0 +1,21 @@
+body{font-family:'Inter',sans-serif}
+html{scroll-behavior:smooth}
+
+.glass{
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.gradient{
+  background:linear-gradient(135deg,#6366f1,#a855f7,#ec4899);
+}
+
+.gradient-text{
+  background: linear-gradient(135deg,#6366f1,#a855f7,#ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
