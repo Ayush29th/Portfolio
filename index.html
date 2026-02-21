@@ -47,31 +47,8 @@ Contact
 </button>
 
 </div>
+</nav>
 
-<!-- Mobile dropdown -->
-<!-- Mobile Slide Menu -->
-<div id="mobileMenu"
-class="fixed top-0 right-0 h-full w-72 bg-gray-900
-transform translate-x-full transition-transform duration-500
-z-[999] md:hidden border-l border-white/10 shadow-2xl">
-<div id="menuOverlay"
-class="fixed inset-0 bg-black/60 hidden z-[998]"
-onclick="toggleMenu()"></div>
-
-<!-- Close button -->
-<div class="flex justify-end p-6">
-<button onclick="toggleMenu()" class="text-2xl">✕</button>
-</div>
-
-<div class="flex flex-col items-center gap-8 mt-10 text-lg">
-
-<a href="#about" onclick="toggleMenu()" class="hover:text-purple-400">About</a>
-<a href="#skills" onclick="toggleMenu()" class="hover:text-purple-400">Skills</a>
-<a href="#projects" onclick="toggleMenu()" class="hover:text-purple-400">Projects</a>
-<a href="#video" onclick="toggleMenu()" class="hover:text-purple-400">Work</a>
-<a href="#contact" onclick="toggleMenu()" class="hover:text-purple-400">Contact</a>
-
-</div>
 </div>
 </div>
 </nav>
@@ -460,6 +437,34 @@ class="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-cent
 
   </div>
 </div>
+
+<!-- Mobile Slide Menu -->
+<div id="mobileMenu"
+class="fixed top-0 right-0 h-full w-72 bg-gray-900
+transform translate-x-full transition-transform duration-500
+z-[999] border-l border-white/10 shadow-2xl md:hidden">
+
+<!-- Close button -->
+<div class="flex justify-end p-6">
+<button onclick="toggleMenu()" class="text-2xl">✕</button>
+</div>
+
+<!-- Menu links -->
+<div class="flex flex-col items-center gap-8 mt-10 text-lg">
+
+<a href="#about" onclick="toggleMenu()">About</a>
+<a href="#skills" onclick="toggleMenu()">Skills</a>
+<a href="#projects" onclick="toggleMenu()">Projects</a>
+<a href="#video" onclick="toggleMenu()">Work</a>
+<a href="javascript:void(0)" onclick="openContactPopup(); toggleMenu()">Contact</a>
+
+</div>
+</div>
+
+<!-- Overlay -->
+<div id="menuOverlay"
+class="fixed inset-0 bg-black/70 hidden z-[998] md:hidden"
+onclick="toggleMenu()"></div>
 
 </body>
 </html>

@@ -28,11 +28,13 @@ function closePopup(){
   document.getElementById("hirePopup").classList.add("hidden");
 }
 
-// Mobile navigation
-// Slide mobile menu
+// Mobile menu toggle
 function toggleMenu(){
   const menu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("menuOverlay");
+
   menu.classList.toggle("translate-x-full");
+  overlay.classList.toggle("hidden");
 }
 
 // Contact form
