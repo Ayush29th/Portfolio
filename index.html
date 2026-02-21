@@ -51,9 +51,12 @@ Contact
 <!-- Mobile dropdown -->
 <!-- Mobile Slide Menu -->
 <div id="mobileMenu"
-class="fixed top-0 right-0 h-full w-72 bg-black/95 backdrop-blur-xl 
-transform translate-x-full transition-transform duration-500 
-z-50 md:hidden border-l border-white/10">
+class="fixed top-0 right-0 h-full w-72 bg-gray-900
+transform translate-x-full transition-transform duration-500
+z-[999] md:hidden border-l border-white/10 shadow-2xl">
+<div id="menuOverlay"
+class="fixed inset-0 bg-black/60 hidden z-[998]"
+onclick="toggleMenu()"></div>
 
 <!-- Close button -->
 <div class="flex justify-end p-6">

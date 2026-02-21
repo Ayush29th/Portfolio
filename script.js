@@ -12,7 +12,11 @@ window.addEventListener('scroll',()=>{
 });
 
 function toggleMenu(){
-  document.getElementById("mobileMenu").classList.toggle("hidden");
+  const menu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("menuOverlay");
+
+  menu.classList.toggle("translate-x-full");
+  overlay.classList.toggle("hidden");
 }
 
 // Hire Me popup
