@@ -16,7 +16,6 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body class="bg-black text-white overflow-x-hidden">
@@ -27,13 +26,49 @@
 <!-- NAVBAR -->
 <nav class="fixed w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
 <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+<!-- Logo -->
 <h1 class="font-bold text-xl">Ayush.dev</h1>
+
+<!-- Desktop menu -->
 <div class="hidden md:flex gap-8 text-sm">
 <a href="#about" class="hover:text-purple-400">About</a>
 <a href="#skills" class="hover:text-purple-400">Skills</a>
 <a href="#projects" class="hover:text-purple-400">Projects</a>
 <a href="#video" class="hover:text-purple-400">Work</a>
-<a href="#contact" class="hover:text-purple-400">Contact</a>
+<a href="javascript:void(0)" onclick="openContactPopup()" class="hover:text-purple-400">
+Contact
+</a>
+</div>
+
+<!-- Hamburger -->
+<button onclick="toggleMenu()" class="md:hidden text-2xl">
+☰
+</button>
+
+</div>
+
+<!-- Mobile dropdown -->
+<!-- Mobile Slide Menu -->
+<div id="mobileMenu"
+class="fixed top-0 right-0 h-full w-72 bg-black/95 backdrop-blur-xl 
+transform translate-x-full transition-transform duration-500 
+z-50 md:hidden border-l border-white/10">
+
+<!-- Close button -->
+<div class="flex justify-end p-6">
+<button onclick="toggleMenu()" class="text-2xl">✕</button>
+</div>
+
+<div class="flex flex-col items-center gap-8 mt-10 text-lg">
+
+<a href="#about" onclick="toggleMenu()" class="hover:text-purple-400">About</a>
+<a href="#skills" onclick="toggleMenu()" class="hover:text-purple-400">Skills</a>
+<a href="#projects" onclick="toggleMenu()" class="hover:text-purple-400">Projects</a>
+<a href="#video" onclick="toggleMenu()" class="hover:text-purple-400">Work</a>
+<a href="#contact" onclick="toggleMenu()" class="hover:text-purple-400">Contact</a>
+
+</div>
 </div>
 </div>
 </nav>
@@ -50,7 +85,14 @@ Full Stack Developer • Video Editor • CSE Student
 </p>
 <div class="flex justify-center gap-4">
 <a href="#projects" class="gradient px-8 py-3 rounded-full font-semibold">View Projects</a>
-<a href="#contact" class="px-8 py-3 border border-white/30 rounded-full hover:bg-white/10">Hire Me</a>
+<button onclick="openPopup()" 
+class="px-8 py-3 border border-white/30 rounded-full hover:bg-white/10">
+Hire Me
+</button>
+<a href="resume.pdf" download
+class="px-8 py-3 border border-purple-500 rounded-full hover:bg-purple-500/20">
+Download Resume
+</a>
 </div>
 </div>
 </section>
@@ -86,24 +128,86 @@ My goal is to continuously learn advanced technologies like AI, cloud computing,
 
 <div class="grid md:grid-cols-4 gap-8">
 
-<div class="glass p-8 rounded-2xl hover:scale-105 transition">
-<h3 class="font-semibold mb-2">Frontend</h3>
-<p class="text-gray-400">HTML, CSS, JavaScript, React</p>
+<div class="glass p-8 rounded-2xl hover:scale-105 transition text-center">
+<h3 class="font-semibold mb-6 text-lg">Frontend</h3>
+
+<div class="grid grid-cols-2 gap-6">
+
+<div class="flex flex-col items-center gap-2">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-10">
+<span class="text-sm text-gray-300">HTML</span>
 </div>
 
-<div class="glass p-8 rounded-2xl hover:scale-105 transition">
-<h3 class="font-semibold mb-2">Backend</h3>
-<p class="text-gray-400">Node.js, Express</p>
+<div class="flex flex-col items-center gap-2">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-10">
+<span class="text-sm text-gray-300">CSS</span>
 </div>
 
-<div class="glass p-8 rounded-2xl hover:scale-105 transition">
-<h3 class="font-semibold mb-2">Database</h3>
-<p class="text-gray-400">MongoDB, MySQL</p>
+<div class="flex flex-col items-center gap-2">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10">
+<span class="text-sm text-gray-300">JavaScript</span>
 </div>
 
-<div class="glass p-8 rounded-2xl hover:scale-105 transition">
-<h3 class="font-semibold mb-2">Video Editing</h3>
-<p class="text-gray-400">Premiere Pro, After Effects, CapCut</p>
+<div class="flex flex-col items-center gap-2">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10">
+<span class="text-sm text-gray-300">React</span>
+</div>
+
+</div>
+</div>
+
+<div class="glass p-8 rounded-2xl hover:scale-105 transition text-center">
+<h3 class="font-semibold mb-6 text-lg">Backend</h3>
+
+<div class="grid grid-cols-2 gap-6">
+
+<div class="flex flex-col items-center gap-2">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-10">
+<span class="text-sm text-gray-300">Node.js</span>
+</div>
+
+<div class="flex flex-col items-center gap-2">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" class="w-10">
+<span class="text-sm text-gray-300">Express</span>
+</div>
+
+</div>
+</div>
+
+<div class="glass p-8 rounded-2xl hover:scale-105 transition text-center">
+<h3 class="font-semibold mb-6 text-lg">Database</h3>
+
+<div class="grid grid-cols-2 gap-6">
+
+<div class="flex flex-col items-center gap-2">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="w-10">
+<span class="text-sm text-gray-300">MongoDB</span>
+</div>
+
+<div class="flex flex-col items-center gap-2">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-10">
+<span class="text-sm text-gray-300">MySQL</span>
+</div>
+
+</div>
+</div>
+
+<div class="glass p-8 rounded-2xl hover:scale-105 transition text-center">
+<h3 class="font-semibold mb-6 text-lg">Video Editing</h3>
+
+<div class="grid grid-cols-2 gap-6">
+
+<div class="flex flex-col items-center gap-2">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" class="w-10">
+<span class="text-sm text-gray-300">Premiere Pro</span>
+</div>
+
+<div class="flex flex-col items-center gap-2">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" class="w-10">
+<span class="text-sm text-gray-300">After Effects</span>
+</div>
+
+</div>
 </div>
 
 </div>
@@ -255,7 +359,8 @@ class="glass p-4 rounded-full hover:scale-110 transition hover:bg-white/10">
 <i class="fa-brands fa-github text-white"></i>
 </a>
 
-<a href="mailto:ayush.pratap.sde@gmail.com"
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=ayush.pratap.sde@gmail.com" 
+target="_blank"
 class="glass p-4 rounded-full hover:scale-110 transition hover:bg-red-500/20">
 <i class="fa-solid fa-envelope text-red-400"></i>
 </a>
@@ -268,6 +373,90 @@ class="glass p-4 rounded-full hover:scale-110 transition hover:bg-red-500/20">
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="script.js"></script>
+
+<!-- Hire Me Popup -->
+<div id="hirePopup" 
+class="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center hidden z-50">
+
+  <div class="glass p-8 rounded-3xl max-w-md w-full relative">
+
+    <!-- Close button -->
+    <button onclick="closePopup()" 
+    class="absolute top-3 right-4 text-gray-400 hover:text-white text-xl">
+    ✕
+    </button>
+
+    <h2 class="text-2xl font-bold mb-4">Let’s Work Together 🚀</h2>
+    <p class="text-gray-400 mb-6">
+      Choose how you want to connect with me.
+    </p>
+
+    <div class="space-y-4">
+
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ayush.pratap.sde@gmail.com" 
+        target="_blank"
+        class="gradient block text-center py-3 rounded-xl font-semibold">
+        Email Me
+      </a>
+
+      <a href="https://wa.me/916306495211" target="_blank"
+      class="block text-center py-3 rounded-xl border border-white/20 hover:bg-white/10">
+      WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- Contact Popup -->
+<div id="contactPopup"
+class="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center hidden z-50">
+
+  <div class="glass p-8 rounded-3xl max-w-md w-full relative">
+
+    <!-- Close -->
+    <button onclick="closeContactPopup()"
+    class="absolute top-3 right-4 text-gray-400 hover:text-white text-xl">
+    ✕
+    </button>
+
+    <h2 class="text-2xl font-bold mb-6 text-center">Connect With Me 🚀</h2>
+
+    <div class="flex justify-center gap-6 text-2xl">
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/ayush-pratap-singh-0483872b7/"
+      target="_blank"
+      class="glass p-4 rounded-full hover:scale-110 transition">
+      <i class="fa-brands fa-linkedin-in text-purple-400"></i>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/ayush_29th/"
+      target="_blank"
+      class="glass p-4 rounded-full hover:scale-110 transition">
+      <i class="fa-brands fa-instagram text-pink-400"></i>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/Ayush29th"
+      target="_blank"
+      class="glass p-4 rounded-full hover:scale-110 transition">
+      <i class="fa-brands fa-github text-white"></i>
+      </a>
+
+      <!-- Email -->
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ayush.pratap.sde@gmail.com"
+      target="_blank"
+      class="glass p-4 rounded-full hover:scale-110 transition">
+      <i class="fa-solid fa-envelope text-red-400"></i>
+      </a>
+
+    </div>
+
+  </div>
+</div>
 
 </body>
 </html>

@@ -11,6 +11,26 @@ window.addEventListener('scroll',()=>{
   document.getElementById('progress').style.width=(winScroll/height)*100+'%';
 });
 
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+}
+
+// Hire Me popup
+function openPopup(){
+  document.getElementById("hirePopup").classList.remove("hidden");
+}
+
+function closePopup(){
+  document.getElementById("hirePopup").classList.add("hidden");
+}
+
+// Mobile navigation
+// Slide mobile menu
+function toggleMenu(){
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("translate-x-full");
+}
+
 // Contact form
 const form = document.getElementById('contactForm');
 
@@ -32,4 +52,13 @@ form.addEventListener('submit', async (e)=>{
    document.getElementById('status').innerText = "Backend not connected.";
  }
 });
+}
+
+// Contact popup
+function openContactPopup(){
+  document.getElementById("contactPopup").classList.remove("hidden");
+}
+
+function closeContactPopup(){
+  document.getElementById("contactPopup").classList.add("hidden");
 }
