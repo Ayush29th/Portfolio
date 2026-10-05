@@ -178,3 +178,20 @@ document.addEventListener('keydown', function(e) {
     closeMob();
   }
 });
+
+/* ── 9. BACK TO TOP ── */
+const bttBtn = document.getElementById('btt');
+if (bttBtn) {
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) {
+      bttBtn.classList.add('show');
+    } else {
+      bttBtn.classList.remove('show');
+    }
+  });
+  bttBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  bttBtn.addEventListener('mouseenter', function() { document.body.classList.add('expand'); });
+  bttBtn.addEventListener('mouseleave', function() { document.body.classList.remove('expand'); });
+}

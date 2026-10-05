@@ -248,6 +248,11 @@ footer .fc{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:v
 .mob-veil{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:989;opacity:0;pointer-events:none;transition:opacity .4s;}
 .mob-veil.on{opacity:1;pointer-events:all;}
 
+/* ── BACK TO TOP ── */
+.btt-btn{position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;background:var(--ink3);color:var(--mid);border:1px solid var(--fog);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;cursor:none;z-index:800;opacity:0;pointer-events:none;transform:translateY(20px);transition:all .3s;}
+.btt-btn.show{opacity:1;pointer-events:all;transform:translateY(0);}
+.btt-btn:hover{background:rgba(212,168,83,.1);border-color:var(--gold);color:var(--gold);transform:translateY(-3px);}
+
 /* ── SCROLL REVEAL ── */
 .reveal{opacity:0;transform:translateY(36px);transition:opacity .8s cubic-bezier(.23,1,.32,1),transform .8s cubic-bezier(.23,1,.32,1);}
 .reveal.in{opacity:1;transform:translateY(0);}
@@ -319,4 +324,5 @@ footer .fc{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:v
   .proj-grid{grid-template-columns:1fr;}
   nav{padding:1.2rem 1.2rem;}
   .logo{font-size:1.2rem;}
+  .btt-btn{bottom:1.2rem;right:1.2rem;width:40px;height:40px;font-size:1rem;}
 }
